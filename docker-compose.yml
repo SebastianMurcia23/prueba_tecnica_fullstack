@@ -1,0 +1,64 @@
+# ============================================
+# Docker Compose - Gestión de Productos
+# Levanta el entorno completo: MongoDB + Backend + Frontend
+# ============================================
+
+version: '3.8'
+
+services:
+  # Base de datos MongoDB
+  mongodb:
+    image: mongo:7
+    container_name: gestion-productos-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-datos:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=gestion-productos
+    networks:
+      - red-app
+
+  # Backend NestJS
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: gestion-productos-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/gestion-productos
+      - JWT_SECRETO=clave_secreta_docker_compose_cambiar_en_prod
+      - JWT_EXPIRACION=24h
+      - PUERTO=3000
+      - PREFIJO_API=api
+      - CORS_ORIGEN=http://localhost:4200
+    networks:
+      - red-app
+
+  # Frontend Angular
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: gestion-productos-frontend
+    restart: unless-stopped
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - red-app
+
+volumes:
+  mongo-datos:
+    driver: local
+
+networks:
+  red-app:
+    driver: bridge

@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Estilos Globales - Gestión de Productos
+   Estética SaaS Premium (tipo Vercel/Stripe)
+   ============================================ */
+
+@layer base {
+  * {
+    @apply border-superficie-800;
+  }
+
+  body {
+    @apply bg-superficie-950 text-superficie-100 min-h-screen;
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-superficie-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-superficie-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-superficie-500;
+  }
+}
+
+@layer components {
+  /* Botón primario premium */
+  .btn-primario {
+    @apply inline-flex items-center justify-center gap-2
+           px-4 py-2.5 rounded-xl
+           bg-primario-600 text-white font-medium text-sm
+           hover:bg-primario-500
+           focus:outline-none focus:ring-2 focus:ring-primario-500 focus:ring-offset-2 focus:ring-offset-superficie-900
+           transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed
+           shadow-sutil hover:shadow-elevada;
+  }
+
+  /* Botón secundario / outline */
+  .btn-secundario {
+    @apply inline-flex items-center justify-center gap-2
+           px-4 py-2.5 rounded-xl
+           bg-superficie-800 text-superficie-200 font-medium text-sm
+           border border-superficie-700
+           hover:bg-superficie-700 hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-superficie-500 focus:ring-offset-2 focus:ring-offset-superficie-900
+           transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Botón peligro */
+  .btn-peligro {
+    @apply inline-flex items-center justify-center gap-2
+           px-4 py-2.5 rounded-xl
+           bg-peligro-600 text-white font-medium text-sm
+           hover:bg-peligro-500
+           focus:outline-none focus:ring-2 focus:ring-peligro-500 focus:ring-offset-2 focus:ring-offset-superficie-900
+           transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Tarjeta premium */
+  .tarjeta {
+    @apply bg-superficie-900 border border-superficie-800
+           rounded-2xl p-6
+           shadow-tarjeta;
+  }
+
+  /* Input premium */
+  .input-campo {
+    @apply w-full px-4 py-2.5 rounded-xl
+           bg-superficie-800 border border-superficie-700
+           text-superficie-100 placeholder-superficie-500
+           focus:outline-none focus:ring-2 focus:ring-primario-500 focus:border-primario-500
+           transition-all duration-200
+           text-sm;
+  }
+
+  /* Label de formulario */
+  .input-etiqueta {
+    @apply block text-sm font-medium text-superficie-300 mb-1.5;
+  }
+
+  /* Mensaje de error de campo */
+  .input-error {
+    @apply text-xs text-peligro-400 mt-1;
+  }
+
+  /* Badge / Etiqueta */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5
+           rounded-full text-xs font-medium;
+  }
+
+  .badge-exito {
+    @apply badge bg-exito-500/10 text-exito-400 border border-exito-500/20;
+  }
+
+  .badge-peligro {
+    @apply badge bg-peligro-500/10 text-peligro-400 border border-peligro-500/20;
+  }
+
+  .badge-advertencia {
+    @apply badge bg-advertencia-500/10 text-advertencia-400 border border-advertencia-500/20;
+  }
+
+  .badge-info {
+    @apply badge bg-primario-500/10 text-primario-400 border border-primario-500/20;
+  }
+
+  /* Skeleton de carga */
+  .skeleton {
+    @apply animate-pulse bg-superficie-800 rounded-xl;
+  }
+
+  /* Overlay para modales */
+  .overlay-modal {
+    @apply fixed inset-0 bg-black/60 backdrop-blur-sm
+           flex items-center justify-center z-50
+           animate-aparecer;
+  }
+}
+
+@layer utilities {
+  /* Transición suave global */
+  .transicion-suave {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Efecto hover para filas de tabla */
+  .fila-hover {
+    @apply hover:bg-superficie-800/50 transition-colors duration-150;
+  }
+}

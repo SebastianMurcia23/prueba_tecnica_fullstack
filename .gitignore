@@ -1,0 +1,96 @@
+# =========================
+# 🔹 SISTEMA / GENERAL
+# =========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+
+# =========================
+# 🔹 VARIABLES DE ENTORNO
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# 🔹 NODE / ANGULAR
+# =========================
+node_modules/
+dist/
+build/
+.tmp/
+.angular/
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor Angular
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# =========================
+# 🔹 JAVA / SPRING BOOT
+# =========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven / Gradle
+.gradle/
+build/
+
+# Logs Spring
+*.log
+
+# =========================
+# 🔹 DOCKER
+# =========================
+docker-compose.override.yml
+
+# =========================
+# 🔹 BASES DE DATOS
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# 🔹 ARCHIVOS TEMPORALES
+# =========================
+*.bak
+*.backup
+*.old
+
+# =========================
+# 🔹 IDEs (INTELLIJ / ECLIPSE / VS)
+# =========================
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# =========================
+# 🔹 TEST / COVERAGE
+# =========================
+coverage/
+*.lcov
+
+# =========================
+# 🔹 OTROS
+# =========================
+uploads/
+temp/
+tmp/
