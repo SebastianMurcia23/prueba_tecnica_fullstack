@@ -104,7 +104,10 @@ npm start
 ## 🤖 Uso de Inteligencia Artificial
 
 ### Herramientas Utilizadas
-- **Antigravity** (Claude): Asistente de codificación para generación de la estructura completa
+- **Copilot**
+- **Claude**
+- **Chatgpt**
+- **Gloogle modo IA**
 
 ### Prompt Principal
 > "Actúa como un Arquitecto de Software Senior. Desarrolla una solución Full Stack profesional con NestJS + MongoDB (backend) y Angular 17 + NgRx + Tailwind CSS (frontend) para gestión de productos, siguiendo el patrón por capas: Entidades → Repositorios → Servicios (interfaces + impl) → DTOs → Controladores."
