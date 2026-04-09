@@ -185,3 +185,7 @@ Disponible en: `http://localhost:3000/api/documentacion`
 | POST | `/api/productos` | Crear producto | ✅ JWT |
 | PUT | `/api/productos/:id` | Actualizar producto | ✅ JWT |
 | DELETE | `/api/productos/:id` | Eliminar producto | ✅ JWT |
+
+## Login
+
+Se realizo un login como funcionalidad extra en el cual para iniciar session debe registrarse priemero.
