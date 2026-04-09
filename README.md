@@ -1,11 +1,11 @@
-# 🌾 Sistema de Gestión de Productos - Sector Agropecuario
+# Sistema de Gestión de Productos - Sector Agropecuario
 
 > Solución Full Stack profesional para la gestión de inventario de productos agropecuarios.  
 > Desarrollado con **NestJS + MongoDB** (Backend) y **Angular 17 + NgRx + Tailwind CSS** (Frontend).
 
 ---
 
-## 📐 Decisiones Arquitectónicas
+##  Decisiones Arquitectónicas
 
 ### Backend – Patrón por Capas Desacopladas
 
@@ -57,7 +57,7 @@ La arquitectura del frontend sigue el patrón de arquitectura limpia:
 
 ---
 
-## 🚀 Ejecución del Proyecto
+## Ejecución del Proyecto
 
 ### Opción 1: Docker Compose (Recomendado)
 
@@ -90,7 +90,7 @@ npm start
 
 ---
 
-## 🛡️ Seguridad
+## Seguridad
 
 - **JWT**: Tokens firmados con secreto configurable, expiración de 24h
 - **Bcrypt**: Hashing de contraseñas con factor de costo 12
@@ -101,7 +101,7 @@ npm start
 
 ---
 
-## 🤖 Uso de Inteligencia Artificial
+## Uso de Inteligencia Artificial
 
 ### Herramientas Utilizadas
 - **Copilot**
@@ -120,7 +120,7 @@ npm start
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 prueba-fullstack/
@@ -158,7 +158,7 @@ prueba-fullstack/
 
 ---
 
-## 🎨 UI/UX
+## UI/UX
 
 - **Tailwind CSS** con paleta de colores personalizada (tema oscuro premium)
 - **Tipografía**: Inter (Google Fonts)
@@ -170,7 +170,7 @@ prueba-fullstack/
 
 ---
 
-## 📚 Documentación API (Swagger)
+## Documentación API (Swagger)
 
 Disponible en: `http://localhost:3000/api/documentacion`
 
